@@ -64,7 +64,7 @@ const Work = () => {
       >
         {filterWork.map((work, index) => {
           return (
-            <div className="app__work-item app__flex" key={index}>
+            <a className="app__work-item app__flex" key={index} href={work.projectLink}>
               <div className="app__work-img app__flex">
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
 
@@ -104,7 +104,7 @@ const Work = () => {
                   <p className="p-text">{work.tags[0]}</p>
                 </div>
               </div>
-            </div>
+            </a>
           );
         })}
       </motion.div>

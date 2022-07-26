@@ -95,6 +95,7 @@
             font-family: var(--font-base);
             color: var(--white-color);
             outline: none;
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
         textarea {
@@ -104,6 +105,7 @@
         &:hover {
             box-shadow: 0 0 10px var(--primary-color);
         }
+
     }
 
     button {
@@ -131,5 +133,11 @@
     @media screen and (max-width: 768px) {
         width: 100%;
         margin: 1rem 0;
+    }
+}
+
+.head-response {
+    h3 {
+        color: white;
     }
 }

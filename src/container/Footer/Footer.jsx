@@ -87,8 +87,8 @@ const Footer = () => {
           </button>
         </div>
       ) : (
-        <div>
-          <h3 className="head-text">Thank you for getting in touch</h3>
+        <div className="head-response">
+          <h3 className="head-text">Thank you for getting in touch...</h3>
         </div>
       )}
     </>
