@@ -64,7 +64,12 @@ const Work = () => {
       >
         {filterWork.map((work, index) => {
           return (
-            <a className="app__work-item app__flex" key={index} href={work.projectLink}>
+            <a
+              className="app__work-item app__flex"
+              key={index}
+              href={work.projectLink}
+              target="_blank"
+            >
               <div className="app__work-img app__flex">
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
 
