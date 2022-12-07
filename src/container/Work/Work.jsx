@@ -69,6 +69,7 @@ const Work = () => {
               key={index}
               href={work.projectLink}
               target="_blank"
+              rel="noreferrer"
             >
               <div className="app__work-img app__flex">
                 <img src={urlFor(work.imgUrl)} alt={work.name} />

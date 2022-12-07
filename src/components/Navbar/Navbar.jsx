@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 
 const Navbar = () => {
+  const navMenu = ["home", "about", "work", "skills", "contact"];
   const [toggle, setToggle] = useState(false);
   return (
     <nav className="app__navbar">
@@ -13,7 +14,7 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         {/* eslint-disable-next-line */}
-        {["home", "about", "work", "skills", "contact"].map((item) => {
+        {navMenu.map((item) => {
           return (
             <li className="app__flex p-text" key={`link-${item}`}>
               <div />
@@ -32,7 +33,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => {
+              {navMenu.map((item) => {
                 return (
                   <li key={item}>
                     <a href={`#${item}`} onClick={() => setToggle(false)}>
