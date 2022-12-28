@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { AiFillEve, AiFillEye, AiFillGithub } from "react-icons/ai";
-import ReactToolTip from "react-tooltip";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -8,6 +6,7 @@ import "./Skill.scss";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
+  // eslint-disable-next-line
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
@@ -23,7 +22,7 @@ const Skills = () => {
   }, []);
   return (
     <div className="skills-wrapper">
-      <h2 className="head-text">Skill & Experience</h2>
+      <h2 className="head-text">Skills</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -35,7 +34,10 @@ const Skills = () => {
                 className="app__skills-item app__flex"
                 key={skill.name}
               >
-                <div className="app__flex" style={{ backgroundColor: skill.bgColor }}>
+                <div
+                  className="app__flex"
+                  style={{ backgroundColor: skill.bgColor }}
+                >
                   <img src={urlFor(skill.icon)} alt={skill.name} />
                 </div>
                 <p className="p-text">{skill.name}</p>
@@ -43,7 +45,7 @@ const Skills = () => {
             );
           })}
         </motion.div>
-        <motion.div className="app__skills-exp">
+        {/* <motion.div className="app__skills-exp">
           {experiences?.map((workExp) => {
             return (
               <>
@@ -82,10 +84,14 @@ const Skills = () => {
               </>
             );
           })}
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
 };
 
-export default AppWrap(MotionWrap(Skills, "app__skills"), "skills", "app_primaryDark");
+export default AppWrap(
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app_primaryDark"
+);
